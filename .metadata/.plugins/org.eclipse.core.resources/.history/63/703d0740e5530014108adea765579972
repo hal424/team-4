@@ -1,0 +1,15 @@
+#include "Gyro.h"
+#include "../Robotmap.h"
+
+Gyro::Gyro() : Subsystem("Gyro") {
+	gyro = new Gyro(new AnalogChannel(1,1));
+}
+    
+void Gyro::InitDefaultCommand() {
+	// Set the default command for a subsystem here.
+	//SetDefaultCommand(new MySpecialCommand());
+}
+
+
+// Put methods for controlling this subsystem
+// here. Call these from Commands.

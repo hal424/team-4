@@ -2,9 +2,10 @@
 #include "Commands/RotateCW90.h"
 #include "Commands/RotateCCW90.h"
 #include "Commands/Drive2Secs.h"
-#include "Commands/FollowWall.h"
+//#include "Commands/FollowWall.h"
 #include "Commands/TurnAndDrive.h"
 #include "Commands/Uturn.h"
+#include "Commands/GyroCommand.h"
 
 OI::OI() {
 	left = new Joystick(JOYSTICK_1);
@@ -18,10 +19,11 @@ OI::OI() {
 	button1->WhenPressed(new RotateCW90());
 	button2->WhenPressed(new RotateCCW90());
 	button3->WhenPressed(new Drive2Secs());
-	button6->WhileHeld(new FollowWall());
-	button4->WhenPressed(new TurnAndDrive());
-	button5->WhenPressed(new Uturn());
-	ir = new AnalogChannel(1,IR_CHANNEL);
+	//button6->WhileHeld(new FollowWall());
+	button5->WhenPressed(new TurnAndDrive());
+	//button5->WhenPressed(new Uturn());
+	button4->WhenPressed(new RotateCW45());
+	//ir = new AnalogChannel(1,IR_CHANNEL);
 }
 
 float OI::getLeftY(){

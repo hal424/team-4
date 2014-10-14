@@ -1,0 +1,22 @@
+#ifndef GYRO_H
+#define GYRO_H
+#include "Commands/Subsystem.h"
+#include "WPILib.h"
+#include <Gyro.h>
+
+/**
+ *
+ *
+ * @author kadiyala
+ */
+class Gyro: public Subsystem {
+private:
+	Gyro* gyro;
+	// It's desirable that everything possible under private except
+	// for methods that implement subsystem capabilities
+public:
+	Gyro();
+	void InitDefaultCommand();
+};
+
+#endif

@@ -2,11 +2,10 @@
 #define COMMAND_BASE_H
 
 #include "Commands/Command.h"
-#include "Subsystems/TankDrive.h"
-#include "Subsystems/IRSensor.h"
+#include "Subsystems/ExampleSubsystem.h"
 #include "OI.h"
-#include "Subsystems/ServoArm.h"
-
+#include "Subsystems/MyGyro.h"
+#include "Subsystems/TankDrive.h"
 
 
 /**
@@ -20,10 +19,11 @@ public:
 	CommandBase();
 	static void init();
 	// Create a single static instance of all of your subsystems
-	static TankDrive* tankDrive;
-	static IRSensor* irSensor;
+	static ExampleSubsystem *examplesubsystem;
 	static OI *oi;
-	static ServoArm* servoArm;
+	static TankDrive* tankDrive;
+	static MyGyro* gyro;
+	
 };
 
 #endif
