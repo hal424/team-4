@@ -3,6 +3,8 @@
 #include "Commands/RotateCCW90.h"
 #include "Commands/Drive2Secs.h"
 #include "Commands/FollowWall.h"
+#include "Commands/TurnAndDrive.h"
+#include "Commands/Uturn.h"
 
 OI::OI() {
 	left = new Joystick(JOYSTICK_1);
@@ -11,10 +13,15 @@ OI::OI() {
 	Button* button2 = new JoystickButton(left, 6);
 	Button*	button3 = new JoystickButton(left, 7);
 	Button* button4 = new JoystickButton(left, 8);
+	Button* button5 = new JoystickButton(left, 9);
+	Button* button6 = new JoystickButton(left, 10);
 	button1->WhenPressed(new RotateCW90());
 	button2->WhenPressed(new RotateCCW90());
 	button3->WhenPressed(new Drive2Secs());
-	button4->WhileHeld(new FollowWall());
+	button6->WhileHeld(new FollowWall());
+	button4->WhenPressed(new TurnAndDrive());
+	button5->WhenPressed(new Uturn());
+	ir = new AnalogChannel(1,IR_CHANNEL);
 }
 
 float OI::getLeftY(){
@@ -23,4 +30,8 @@ float OI::getLeftY(){
 
 float OI::getRightY(){
 	return right->GetY();
+}
+
+float OI::getLeftThrottle(){
+	return ((left->GetTwist())/2) + 0.5;
 }

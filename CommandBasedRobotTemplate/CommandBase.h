@@ -5,6 +5,7 @@
 #include "Subsystems/TankDrive.h"
 #include "Subsystems/IRSensor.h"
 #include "OI.h"
+#include "Subsystems/ServoArm.h"
 
 
 
@@ -22,6 +23,7 @@ public:
 	static TankDrive* tankDrive;
 	static IRSensor* irSensor;
 	static OI *oi;
+	static ServoArm* servoArm;
 };
 
 #endif

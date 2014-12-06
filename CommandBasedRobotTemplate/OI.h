@@ -13,6 +13,7 @@ public:
 	OI();
 	float getLeftY();
 	float getRightY();
+	float getLeftThrottle();
 };
 
 #endif
