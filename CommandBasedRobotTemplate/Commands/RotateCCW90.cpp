@@ -8,7 +8,7 @@ RotateCCW90::RotateCCW90() {
 
 // Called just before this Command runs the first time
 void RotateCCW90::Initialize() {
-	SetTimeout(0.5);
+	SetTimeout(1);
 }
 
 // Called repeatedly when this Command is scheduled to run

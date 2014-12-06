@@ -4,6 +4,7 @@
 #include "Commands/Command.h"
 #include "Subsystems/TankDrive.h"
 #include "OI.h"
+#include "Subsystems/ServoArm.h"
 
 
 
@@ -19,7 +20,8 @@ public:
 	static void init();
 	// Create a single static instance of all of your subsystems
 	static TankDrive* tankDrive;
-	static OI *oi;
+	static OI* oi;
+	static ServoArm* servoArm;
 };
 
 #endif

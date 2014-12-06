@@ -19,6 +19,8 @@ OI::OI() {
 	button4->WhenPressed(new TurnAndDrive());
 	button5->WhenPressed(new Uturn());
 	ir = new AnalogChannel(1,IR_CHANNEL);
+	
+	
 }
 
 float OI::getLeftY(){
@@ -27,4 +29,8 @@ float OI::getLeftY(){
 
 float OI::getRightY(){
 	return right->GetY();
+}
+
+float OI::getLeftThrottle(){
+	return ((left->GetTwist())/2) + 0.5;
 }

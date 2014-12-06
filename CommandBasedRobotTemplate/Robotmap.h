@@ -18,8 +18,8 @@
 // number and the module. For example you with a rangefinder:
 // #define RANGE_FINDER_PORT 1
 // #define RANGE_FINDER_MODULE 1
-#define LEFT_VICTOR 1
-#define RIGHT_VICTOR 2
+#define LEFT_VICTOR 2
+#define RIGHT_VICTOR 1
 #define JOYSTICK_1 1
 #define JOYSTICK_2 2
 #define IR_CHANNEL 4

@@ -2,16 +2,19 @@
 #include "Commands/Command.h"
 #include "Commands/Drive.h"
 #include "CommandBase.h"
+#include "Commands/MoveServoArm.h"
 
 class CommandBasedRobot : public IterativeRobot {
 private:
 	Command *driveCommand;
 	LiveWindow *lw;
+	Command *MoveServoArmCommand;
 	
 	virtual void RobotInit() {
 		CommandBase::init();
 		lw = LiveWindow::GetInstance();
 		driveCommand = new Drive();
+		MoveServoArmCommand = new MoveServoArm();
 	}
 	
 	virtual void AutonomousInit() {
@@ -27,6 +30,7 @@ private:
 		// continue until interrupted by another command, remove
 		// this line or comment it out.
 		driveCommand->Start();
+		MoveServoArmCommand->Start();
 	}
 	
 	virtual void TeleopPeriodic() {

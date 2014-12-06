@@ -4,13 +4,13 @@
 #include "Preferences.h"
 
 Uturn::Uturn() {
-	Preferences *pref = Preferences::GetInstance();
-	float time = pref->GetFloat("time",0.5);
-	float time2 = pref->GetFloat("time2",1.0);
-		AddSequential(new DriveXSecs(time));
+	//Preferences *pref = Preferences::GetInstance();
+	//float time = pref->GetFloat("time",0.5);
+	//float time2 = pref->GetFloat("time2",1.5);
+		AddSequential(new DriveXSecs(0.5));
         AddSequential(new RotateCCW90());
-        AddSequential(new DriveXSecs(time2));
+        AddSequential(new DriveXSecs(1.0));
         AddSequential(new RotateCCW90());
-        AddSequential(new DriveXSecs(time));
+        AddSequential(new DriveXSecs(0.5));
 
 }

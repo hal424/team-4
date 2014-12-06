@@ -1,9 +1,10 @@
 #include "DriveXSecs.h"
 
-DriveXSecs::DriveXSecs(float time) {
+DriveXSecs::DriveXSecs(float t) {
 	// Use requires() here to declare subsystem dependencies
 	// eg. requires(chassis);
 	Requires(tankDrive);
+	time = t;
 }
 
 // Called just before this Command runs the first time
@@ -13,7 +14,7 @@ void DriveXSecs::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void DriveXSecs::Execute() {
-	tankDrive->tankDrive(-0.6,-0.6);
+	tankDrive->tankDrive(-0.3,-0.3);
 }
 
 // Make this return true when this Command no longer needs to run execute()
