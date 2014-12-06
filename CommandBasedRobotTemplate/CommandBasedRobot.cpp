@@ -31,6 +31,7 @@ private:
 	
 	virtual void TeleopPeriodic() {
 		Scheduler::GetInstance()->Run();
+		SmartDashboard::PutNumber("IRValue", CommandBase::irSensor->GetIRVoltage());
 	}
 	
 	virtual void TestPeriodic() {

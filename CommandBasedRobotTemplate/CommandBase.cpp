@@ -10,12 +10,13 @@ CommandBase::CommandBase() : Command() {
 
 // Initialize a single static instance of all of your subsystems to NULL
 TankDrive* CommandBase::tankDrive = NULL;
+IRSensor* CommandBase::irSensor = NULL;
 OI* CommandBase::oi = NULL;
 
 void CommandBase::init() {
     // Create a single static instance of all of your subsystems. The following
 	// line should be repeated for each subsystem in the project.
 	tankDrive = new TankDrive();
-	
+	irSensor = new IRSensor();
 	oi = new OI();
 }

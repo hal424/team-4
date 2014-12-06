@@ -13,7 +13,7 @@ void Drive2Secs::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void Drive2Secs::Execute() {
-	tankDrive->tankDrive(-0.6,-0.6);
+	tankDrive->tankDrive(-0.5,-0.5);
 }
 
 // Make this return true when this Command no longer needs to run execute()

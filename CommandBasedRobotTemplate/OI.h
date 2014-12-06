@@ -9,7 +9,6 @@ class OI {
 private:
 	Joystick* left;
 	Joystick* right;
-	AnalogChannel* ir;
 public:
 	OI();
 	float getLeftY();

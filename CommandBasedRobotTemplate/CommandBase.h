@@ -3,6 +3,7 @@
 
 #include "Commands/Command.h"
 #include "Subsystems/TankDrive.h"
+#include "Subsystems/IRSensor.h"
 #include "OI.h"
 
 
@@ -19,6 +20,7 @@ public:
 	static void init();
 	// Create a single static instance of all of your subsystems
 	static TankDrive* tankDrive;
+	static IRSensor* irSensor;
 	static OI *oi;
 };
 
