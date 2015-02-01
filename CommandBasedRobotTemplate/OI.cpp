@@ -6,23 +6,26 @@
 #include "Commands/TurnAndDrive.h"
 #include "Commands/Uturn.h"
 #include "Commands/GyroCommand.h"
+#include "Commands/SquareUp.h"
 
 OI::OI() {
 	left = new Joystick(JOYSTICK_1);
 	right = new Joystick(JOYSTICK_2);
-	Button* button1 = new JoystickButton(left, 5);
-	Button* button2 = new JoystickButton(left, 6);
-	Button*	button3 = new JoystickButton(left, 7);
-	Button* button4 = new JoystickButton(left, 8);
-	Button* button5 = new JoystickButton(left, 9);
-	Button* button6 = new JoystickButton(left, 10);
-	button1->WhenPressed(new RotateCW90());
-	button2->WhenPressed(new RotateCCW90());
-	button3->WhenPressed(new Drive2Secs());
+	//Button* button1 = new JoystickButton(left, 5);
+	//Button* button2 = new JoystickButton(left, 6);
+	//Button*	button3 = new JoystickButton(left, 7);
+	//Button* button4 = new JoystickButton(left, 8);
+	//Button* button5 = new JoystickButton(left, 9);
+	//Button* button6 = new JoystickButton(left, 10);
+	Button* button7 = new JoystickButton(left, 11);
+	//button1->WhenPressed(new RotateCW90());
+	//button2->WhenPressed(new RotateCCW90());
+	//button3->WhenPressed(new Drive2Secs());
 	//button6->WhileHeld(new FollowWall());
-	button5->WhenPressed(new TurnAndDrive());
+	//button5->WhenPressed(new TurnAndDrive());
 	//button5->WhenPressed(new Uturn());
-	button4->WhenPressed(new RotateCW45());
+	//button4->WhenPressed(new RotateCW45());
+	button7->WhenPressed(new SquareUp());
 	//ir = new AnalogChannel(1,IR_CHANNEL);
 }
 

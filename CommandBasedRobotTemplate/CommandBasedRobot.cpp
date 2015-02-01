@@ -32,6 +32,8 @@ private:
 	
 	virtual void TeleopPeriodic() {
 		Scheduler::GetInstance()->Run();
+		SmartDashboard::PutNumber("Left IR Voltage", CommandBase::tankDrive->getIRVoltage());
+		SmartDashboard::PutNumber("Right IR Voltage", CommandBase::tankDrive->getRightIRVoltage());
 	}
 	
 	virtual void TestPeriodic() {
